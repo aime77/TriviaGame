@@ -1,7 +1,7 @@
 $(document).ready(function () {
     var game = {
         n1: {
-            q: "Do human use only 10% of their brain?",
+            q: "Do humans use only 10% of their brain?",
             a: ["No, we use 100% but not all at once", "Sometimes", "Yes", "No, we use 50% of our brain"],
             ca: "No, we use 100% but not all at once",
             gifq: "assets/images/gifq.jpg",
@@ -42,7 +42,7 @@ $(document).ready(function () {
         },
         n6: {
             q: "According to recent studies: do men have a larger brain than women?",
-            a: ["Yes, ~ 10% larger", "No, women brains are larger by  10%", "Gender doesn't affect brain size", "Yes, ~ 15% larger"],
+            a: ["Yes, ~ 10% larger", "No, women's brains are larger by 10%", "Gender doesn't affect brain size", "Yes, ~ 15% larger"],
             ca: "Yes, ~ 10% larger",
             gifq: "assets/images/gifq6.png",
             gifC: "assets/images/gifC6.gif",
@@ -50,7 +50,7 @@ $(document).ready(function () {
         },
         n7: {
             q: "Does the brain has higuer processing capacity than the fastest computer?",
-            a: ["Yes, the brain's processing capacity is 0.1 quadrillions/sec", "No, a compuer's 1.026 processing capacity is greater", "This comparison cannot be made", "All of the above"],
+            a: ["Yes, the brain's processing capacity is 0.1 quadrillions/sec", "No, a compuer's 1.026 quadrillions/sec processing capacity is greater", "This comparison cannot be made", "All of the above"],
             ca: "This comparison cannot be made",
             gifq: "assets/images/gifq7.jpeg",
             gifC: "assets/images/gifC7.gif",
@@ -74,7 +74,7 @@ $(document).ready(function () {
         },
         n10: {
             q: "Does the brain work at the Speed of Light?",
-            a: ["Yes", "No, the fastest neuronal transmissions are of ~100 m/s", "It can in extreme instances", "No,the fastest neuronal transmissions are of ~10 m/s"],
+            a: ["Yes", "No, the fastest neuronal transmissions are of ~100 m/s", "It can in extreme instances", "No, the fastest neuronal transmissions are of ~10 m/s"],
             ca: "No, the fastest neuronal transmissions are of ~100 m/s",
             gifq: "assets/images/gifq10.jpg",
             gifC: "assets/images/gifC10.gif",
