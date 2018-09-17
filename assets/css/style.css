@@ -1,11 +1,68 @@
 body{
-    background-image: url("../images/bgimage.jpg");
+    background-image: url("../images/brain_bg.jpeg");
     background-repeat: repeat;
-background-size: cover;
+    background-size: cover;
     }
 
-.container{
-    background-color: yellowgreen;
-}
+    h1, h2{
+        text-align: center;
+        font-family: 'Gamja Flower', cursive;
+        color:purple;
+        font-weight: bolder;
+        margin:20px;
+
+    }
+
+    .jumbotron{
+        height:850px;
+        width: 870px;
+
+    }
+    #startB, #startOverB{
+        width:360px;
+    }
+
+    #startB:hover{
+        background-color: lightpink;
+    }
+
+    #questionSpace{
+        height:50px;
+        font-family: 'Work Sans', sans-serif;
+        font-size:35px;
+        text-align: center;
+        margin-top:30px;
+    }
+
+    .list-group-item{
+        height:80px;
+        font-size:20px;
+    }
+
+    .opts:hover {
+        background-color:yellow;
+    }
+
+  .opt{
+      height:45px;
+      font-size:20px;
+      width:360px;
+      text-justify: auto;
+  }
+
+  img{
+      height: 300px;
+      width:360px;
+      margin-top:45px;
+  }
 
 
+
+ #msgSpaceID{
+     text-align: center;
+     font-family: 'Work Sans', sans-serif;
+    font-size:35px;
+    margin:40px;
+
+ }
+ 
