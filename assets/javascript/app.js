@@ -61,7 +61,7 @@ $(document).ready(function () {
             a: ["12 pounds", "5 pounds", "3 pounds", "15 pounds"],
             ca: "3 pounds",
             gifq: "assets/images/gifq8.jpg",
-            gifC: "assets/images/gifC8",
+            gifC: "assets/images/gifC8.gif",
             gifI: "assets/images/gifI8.gif",
         },
         n9: {
