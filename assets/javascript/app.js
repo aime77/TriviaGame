@@ -29,15 +29,15 @@ $(document).ready(function () {
             a: ["About 10%", "About 5%", "About 20%", "About 35%"],
             ca: "About 20%",
             gifq: "assets/images/gifq4.jpeg",
-            gifC: "assets/images/chimpanzee_correct.gif",
-            gifI: "assets/images/gifC4.gif",
+            gifC: "assets/images/gifC4.gif",
+            gifI: "assets/images/gifI4.jpg",
         },
         n5: {
             q: "Will damage to one side of the brain affect the opposite side?",
             a: ["Yes, it's all connected", "No, the brain is divided down the middle and has 2 sides", "Depending on the injury", "Only if the injury is severe"],
             ca: "No, the brain is divided down the middle and has 2 sides",
             gifq: "assets/images/gifq5.jpg",
-            gifC: "assets/images/gifC5.gif",
+            gifC: "assets/images/gifC55.gif",
             gifI: "assets/images/gifI5.jpeg",
         },
         n6: {
@@ -49,8 +49,8 @@ $(document).ready(function () {
             gifI: "assets/images/gifI6.jpg",
         },
         n7: {
-            q: "Does the brain has higuer processing capacity than the fastest computer?",
-            a: ["Yes, the brain's processing capacity is 0.1 quadrillions/sec", "No, a compuer's 1.026 quadrillions/sec processing capacity is greater", "This comparison cannot be made", "All of the above"],
+            q: "Does the brain have higuer processing capacity than the fastest computer?",
+            a: ["Yes, since the brain's processing capacity is 0.1 quadrillions/sec", "No, a computer's 1.0 quadrillions/sec processing capacity is greater", "This comparison cannot be made", "All of the above"],
             ca: "This comparison cannot be made",
             gifq: "assets/images/gifq7.jpeg",
             gifC: "assets/images/gifC7.gif",
@@ -98,7 +98,7 @@ $(document).ready(function () {
         },
         n13: {
             q: "What happens as the brain ages?",
-            a: ["The brain shrinks in volume and blood flow", "It’s ability to learn decreases", "Neuronal connections weaken", "All of the above"],
+            a: ["The brain shrinks in volume and blood flow", "It's ability to learn decreases", "Neuronal connections weaken", "All of the above"],
             ca: "The brain shrinks in volume and blood flow",
             gifq: "assets/images/gifq13.jpeg",
             gifC: "assets/images/gifC13.gif",
@@ -119,23 +119,23 @@ $(document).ready(function () {
     startButton.appendTo('#container_1');
 
     var group = $('<div class="list-group mx-auto center ml-70></div>');
-    var scoreSpace = $('<span class="list-group-item list-group-item-action col-5 mx-auto d-flex justify-content-center display-5 align-self-center opt"></span>');
-    var timerSpace = $('<span class="list-group-item list-group-item-action col-5 mx-auto d-flex justify-content-center display-5 align-self-center opt"></span>');
-    var missedASpace = $('<span class="list-group-item list-group-item-action col-5 mx-auto d-flex justify-content-center display-5 opt"></span>');
-    var incorrectASpace = $('<span class="list-group-item list-group-item-action col-5 mx-auto d-flex justify-content-center display-5 opt"></span>');
+    var scoreSpace = $('<span class="list-group-item list-group-item-action col-5-lg mx-auto d-flex justify-content-center display-5 align-self-center opt text-justify"></span>');
+    var timerSpace = $('<span class="list-group-item list-group-item-action col-5-lg mx-auto d-flex justify-content-center display-5 align-self-center opt text-justify"></span>');
+    var missedASpace = $('<span class="list-group-item list-group-item-action col-5-lg mx-auto d-flex justify-content-center display-5 opt text-justify"></span>');
+    var incorrectASpace = $('<span class="list-group-item list-group-item-action col-5-lg mx-auto d-flex justify-content-center display-5 opt text-justify"></span>');
     var allElements2 = group.add(timerSpace).add(scoreSpace);
 
     var score = 0;
     scoreSpace.text("Score: " + score);
 
-    var questionSpace = $('<div class="display-4" id="questionSpace"><p></p></div>');
-    var msgSpace = $('<div id="msgSpaceID"><p></p></div>');
+    var questionSpace = $('<div id="questionSpace"><p></p></div>');
+    var msgSpace = $('<selector id="msgSpaceID"><p></p></selector>');
 
     var group2 = $('<div class="list-group"></div>');
-    var option1 = $('<button class="list-group-item list-group-item-action col-6 mx-auto d-inline display-4 opts"></button>');
-    var option2 = $('<button class="list-group-item list-group-item-action col-6 mx-auto d-inline display-4 opts"></button>');
-    var option3 = $('<button class="list-group-item list-group-item-action col-6 mx-auto d-inline display-4 opts"></button>');
-    var option4 = $('<button class="list-group-item list-group-item-action col-6 mx-auto d-inline display-4 opts"></button>');
+    var option1 = $('<button class="list-group-item list-group-item-action col-lg-6 col-md-12 col-sm-12 mx-auto d-inline display-4 opts text-justify"></button>');
+    var option2 = $('<button class="list-group-item list-group-item-action col-lg-6 col-md-12 col-sm-12 mx-auto d-inline display-4 opts text-justify"></button>');
+    var option3 = $('<button class="list-group-item list-group-item-action col-lg-6 col-md-12 col-sm-12 mx-auto d-inline display-4 opts text-justify"></button>');
+    var option4 = $('<button class="list-group-item list-group-item-action col-lg-6 col-md-12 col-sm-12 mx-auto d-inline display-4 opts text-justify"></button>');
     var allElements = group2.add(option1).add(option2).add(option3).add(option3).add(option4);
 
     function clear() {

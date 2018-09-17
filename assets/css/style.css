@@ -14,7 +14,7 @@ body{
     }
 
     .jumbotron{
-        height:850px;
+        height:100%;
         width: 870px;
 
     }
@@ -27,7 +27,6 @@ body{
     }
 
     #questionSpace{
-        height:50px;
         font-family: 'Work Sans', sans-serif;
         font-size:35px;
         text-align: center;
