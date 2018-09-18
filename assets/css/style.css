@@ -6,7 +6,7 @@ body{
 
     h1, h2{
         text-align: center;
-        font-family: 'Gamja Flower', cursive;
+        font-family: 'Ruslan Display', cursive;
         color:purple;
         font-weight: bolder;
         margin:20px;
@@ -31,6 +31,7 @@ body{
         font-size:35px;
         text-align: center;
         margin-top:30px;
+        color: blue;
     }
 
     .list-group-item{
@@ -48,6 +49,9 @@ body{
       width:360px;
       text-justify: auto;
   }
+  .opts{
+      text-align:center;
+  }
 
   img{
       height: 300px;
@@ -61,7 +65,7 @@ body{
      text-align: center;
      font-family: 'Work Sans', sans-serif;
     font-size:35px;
-    margin:40px;
+    margin:30px;
 
  }
  

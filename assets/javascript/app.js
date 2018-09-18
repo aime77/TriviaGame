@@ -49,7 +49,7 @@ $(document).ready(function () {
             gifI: "assets/images/gifI6.jpg",
         },
         n7: {
-            q: "Does the brain have higuer processing capacity than the fastest computer?",
+            q: "Does the brain have higher processing capacity than the fastest computer?",
             a: ["Yes, since the brain's processing capacity is 0.1 quadrillions/sec", "No, a computer's 1.0 quadrillions/sec processing capacity is greater", "This comparison cannot be made", "All of the above"],
             ca: "This comparison cannot be made",
             gifq: "assets/images/gifq7.jpeg",
@@ -105,7 +105,12 @@ $(document).ready(function () {
             gifI: "assets/images/gifI13.jpeg",
         }
     }
-
+    //Trying to make correct answer red
+    //for(var i=1;i<14;i++){
+    //   var str = game["n" + i].ca;
+    //}
+    //var result = str.fontcolor("red");
+    //console.log(result);
     //
 
     var titleSpace = $('<h2>How much do you know about YOUR BRAIN?</h2>');
@@ -118,7 +123,7 @@ $(document).ready(function () {
     var startButton = $('<button type="button" id="startB" class="btn btn-primary btn-lg mx-auto d-block">START</button>');
     startButton.appendTo('#container_1');
 
-    var group = $('<div class="list-group mx-auto center ml-70></div>');
+    var group = $('<div class="list-group mx-auto></div>');
     var scoreSpace = $('<span class="list-group-item list-group-item-action col-5-lg mx-auto d-flex justify-content-center display-5 align-self-center opt text-justify"></span>');
     var timerSpace = $('<span class="list-group-item list-group-item-action col-5-lg mx-auto d-flex justify-content-center display-5 align-self-center opt text-justify"></span>');
     var missedASpace = $('<span class="list-group-item list-group-item-action col-5-lg mx-auto d-flex justify-content-center display-5 opt text-justify"></span>');
@@ -129,7 +134,7 @@ $(document).ready(function () {
     scoreSpace.text("Score: " + score);
 
     var questionSpace = $('<div id="questionSpace"><p></p></div>');
-    var msgSpace = $('<selector id="msgSpaceID"><p></p></selector>');
+    var msgSpace = $('<div id="msgSpaceID"><p></p></div>');
 
     var group2 = $('<div class="list-group"></div>');
     var option1 = $('<button class="list-group-item list-group-item-action col-lg-6 col-md-12 col-sm-12 mx-auto d-inline display-4 opts text-justify"></button>');
@@ -146,11 +151,11 @@ $(document).ready(function () {
         option4.detach();
     }
 
-    function   reseter(){
-        questionCounter=0;
-        score=0;
-        missedCounter=0;
-        scoreIncorrect=0;
+    function reseter() {
+        questionCounter = 0;
+        score = 0;
+        missedCounter = 0;
+        scoreIncorrect = 0;
         timerSpace.detach();
         scoreSpace.detach();
         titleSpace.detach();
@@ -171,7 +176,7 @@ $(document).ready(function () {
         time = 30;
         intervalID = setInterval(timer, 1000);
         questionCounter++;
-        timerSpace.text("Time Remaining: " +time + " seconds");
+        timerSpace.text("Time Remaining: " + time + " seconds");
     }
 
     function timer() {
@@ -181,10 +186,10 @@ $(document).ready(function () {
         }
         else {
             time--;
-            if(time===1)
-            timerSpace.text("Time Remaining: " +time+ " second");
-            else{
-            timerSpace.text("Time Remaining: " +time+ " seconds");
+            if (time === 1)
+                timerSpace.text("Time Remaining: " + time + " second");
+            else {
+                timerSpace.text("Time Remaining: " + time + " seconds");
             }
         }
     }
@@ -196,6 +201,7 @@ $(document).ready(function () {
     });
 
     function questionAnswer() {
+        scoreSpace.removeClass("mt-5");
         startButton.detach();
         msgSpace.detach();
         clearInterval(intervalGifID);
@@ -218,11 +224,12 @@ $(document).ready(function () {
             }
         }
     }
-   var that;
-    var scoreIncorrect=0;
+    var that;
+    var scoreIncorrect = 0;
     var msgAText;
     var intervalGifID;
     allElements.on("click", function () {
+        scoreSpace.addClass("mt-5");
         clearInterval(intervalID);
         clear();
         chosenVar = $(this);
@@ -243,35 +250,37 @@ $(document).ready(function () {
                     }
                     else {
                         scoreIncorrect++;
-                        msgAText = "Hmm not quite, you chose: " + chosenVar.text() + ". <br> The correct answer is: " + game["n" + i].ca +".";
+                        msgAText = "Hmm not quite, you chose: " + chosenVar.text() + ". <br> The correct answer is: " + game["n" + i].ca + ".";
                         msgSpace.html(msgAText).appendTo("#container_1");
                         gifSpace.attr("src", game["n" + i].gifI).appendTo('#container_1');
                         gifIntervalID = setTimeout(questionAnswer, 3000);
 
                     }
                 }
-                
+
             }
-            
+
         }
     });
     var missedCounter = 0;
     function runOutOfT() {
         for (var i = 1; i < 14; i++) {
             if (questionCounter === i) {
-                that=game["n" + i].ca}}
+                that = game["n" + i].ca
+            }
+        }
         clear();
         missedCounter++;
-        msgSpace.text("Try faster next time!! The correct answer is "+ that+".").appendTo('#container_1');
+        msgSpace.text("Try faster next time!! The correct answer is " + that + ".").appendTo('#container_1');
         gifSpace.attr("src", "assets/images/timeout.gif").appendTo('#container_1');
         intervalGifID = setTimeout(questionAnswer, 3000);
     }
 
     var startOverB = $('<button type="button" id="startOverB" class="btn btn-primary btn-lg mx-auto d-block">START OVER?</button>');
     startOverB.on("click", function () {
-          reseter();
+        reseter();
     });
-  
+
 
     function reset() {
         clear();
